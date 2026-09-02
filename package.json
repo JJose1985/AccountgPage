@@ -1,0 +1,16 @@
+{
+  "name": "accountgpage",
+  "version": "1.0.0",
+  "description": "Web page about accounting process",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/JJose1985/AccountgPage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
