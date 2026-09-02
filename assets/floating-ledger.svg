@@ -1,0 +1,45 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="710" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE6CF"/>
+      <stop offset="1" stop-color="#DDF5F8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="180" y1="130" x2="590" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F4FAFF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="270" y1="238" x2="520" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E97835"/>
+      <stop offset="1" stop-color="#16707A"/>
+    </linearGradient>
+    <filter id="shadow" x="110" y="80" width="590" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="22"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.117647 0 0 0 0 0.172549 0 0 0 0 0.282353 0 0 0 0.14 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect x="30" y="40" width="740" height="440" rx="36" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="154" y="110" width="492" height="280" rx="24" fill="url(#card)"/>
+  </g>
+
+  <rect x="188" y="148" width="164" height="18" rx="9" fill="#EAF2FD"/>
+  <rect x="188" y="178" width="280" height="16" rx="8" fill="#F0F5FD"/>
+
+  <rect x="188" y="226" width="410" height="18" rx="9" fill="url(#accent)" opacity="0.85"/>
+  <rect x="188" y="258" width="350" height="18" rx="9" fill="#E9F6F8"/>
+  <rect x="188" y="290" width="388" height="18" rx="9" fill="#F4ECE3"/>
+
+  <rect x="188" y="332" width="128" height="28" rx="14" fill="#1E2430"/>
+  <rect x="326" y="332" width="110" height="28" rx="14" fill="#E97835"/>
+
+  <circle cx="660" cy="124" r="22" fill="#FFE6CF"/>
+  <circle cx="126" cy="400" r="18" fill="#BFE9EE"/>
+</svg>

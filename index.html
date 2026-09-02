@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive finance dashboard landing page for multiple device sizes." />
+  <title>AccountingPage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+   <div class="animated-bg" aria-hidden="true">
+    <video class="animated-bg-video" autoplay muted loop playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="page-glow page-glow-right" aria-hidden="true"></div>
+ <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand" aria-label="AccountingPage home">
+        <span class="brand-mark" aria-hidden="true">AP</span>
+        <span class="brand-name">AccountingPage</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-services">
+          <a class="nav-services-trigger" href="#Services" aria-expanded="false">Servicios</a>
+          <a class="service-option" href="contabilidad-financiera-fiscal.html">Contabilidad financiera y fiscal</a>
+          <a class="service-option service-option-child" href="impuestos-y-cumplimiento.html">Impuestos y cumplimiento</a>
+          <a class="service-option service-option-grandchild" href="nomina-y-seguridad-social.html">Nómina y seguridad social</a>
+          <a class="service-option service-option-great-grandchild" href="auditoria-y-control-interno.html">Auditoría y control interno</a>
+        </div>
+        <div class="nav-special-projects">
+          <a class="nav-special-projects-trigger" href="#special-projects" aria-expanded="false">Proyectos Especiales</a>
+          <a class="special-project-option" href="#consulting-and-special-projects">Consultoría y proyectos especiales</a>
+        </div>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="container mobile-menu" id="mobile-menu" hidden>
+      <a href="#Services">Servicios</a>
+      <a class="service-option" href="contabilidad-financiera-fiscal.html">Contabilidad financiera y fiscal</a>
+      <a class="service-option service-option-child" href="impuestos-y-cumplimiento.html">Impuestos y cumplimiento</a>
+      <a class="service-option service-option-child" href="nomina-y-seguridad-social.html">Nómina y seguridad social</a>
+      <a class="service-option service-option-child" href="auditoria-y-control-interno.html">Auditoría y control interno</a>
+      <a href="#special-projects">Proyectos Especiales</a>
+      <a class="special-project-option" href="#consulting-and-special-projects">Consultoría y proyectos especiales</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-section container" id="Services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p class="section-label">Servicios</p>
+        <h1 id="services-title">Asesoría contable para decisiones claras</h1>
+        <p>Soluciones prácticas para mantener las finanzas, obligaciones y controles de su empresa en orden.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card" id="contabilidad-financiera-fiscal">
+          <h2>Contabilidad financiera y fiscal</h2>
+          <p>Organizamos y conciliamos sus movimientos contables cada mes, verificando que la información esté completa y respaldada. Entregamos estados financieros claros y un seguimiento de hallazgos para apoyar decisiones oportunas.</p>
+        </article>
+        <article class="service-card" id="Tax-and-compliance">
+          <h2>Impuestos y cumplimiento</h2>
+          <p>Revisamos el calendario fiscal, reunimos la documentación necesaria y preparamos sus declaraciones con anticipación. Damos seguimiento a pagos, requerimientos y cambios normativos para mantener sus obligaciones al día.</p>
+        </article>
+        <article class="service-card" id="payroll-and-social-security">
+          <h2>Nómina y seguridad social</h2>
+          <p>Procesamos la nómina a partir de incidencias, deducciones y novedades de cada período, con validaciones antes del pago. También gestionamos aportes de seguridad social, comprobantes y reportes para su equipo.</p>
+        </article>
+        <article class="service-card" id="internal-audit-and-control">
+          <h2>Auditoría y control interno</h2>
+          <p>Mapeamos los procesos clave, identificamos riesgos y comprobamos que los controles se apliquen de forma consistente. Presentamos recomendaciones priorizadas y acompañamos su implementación para fortalecer la operación.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="Contact">
+    <div class="container footer-grid">
+      <div class="footer-intro">
+        <a href="#" class="brand" aria-label="AccountingPage home">
+          <span class="brand-mark" aria-hidden="true">AP</span>
+          <span class="brand-name">AccountingPage</span>
+        </a>
+        <p>Información financiera ordenada y acompañamiento contable para avanzar con confianza.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Servicios</h2>
+        <a href="#contabilidad-financiera-fiscal">Contabilidad financiera</a>
+        <a href="#Tax-and-compliance">Impuestos y cumplimiento</a>
+        <a href="#payroll-and-social-security">Nómina y seguridad social</a>
+        <a href="#internal-audit-and-control">Auditoría y control interno</a>
+      </div>
+      <div class="footer-column">
+        <h2>Contacto</h2>
+        <a href="mailto:hola@accountingpage.com">hola@accountingpage.com</a>
+        <a href="tel:+18095550124">+1 809 555 0124</a>
+        <p>Santo Domingo, República Dominicana</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AccountingPage. Todos los derechos reservados.</p>
+      <a href="#Services">Volver a servicios</a>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+
+    const closeMobileMenu = () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      mobileMenu.hidden = true;
+    };
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      const willOpen = !isOpen;
+
+      if (willOpen) {
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Close menu');
+        mobileMenu.hidden = false;
+      } else {
+        closeMobileMenu();
+      }
+    });
+
+    mobileMenu.addEventListener('click', (event) => {
+      if (event.target.closest('a, button')) {
+        closeMobileMenu();
+      }
+    });
+
+    const desktopMenus = document.querySelectorAll('.nav-services, .nav-special-projects');
+    const servicesMenu = document.querySelector('.nav-services');
+    const servicesTrigger = document.querySelector('.nav-services-trigger');
+    const specialProjectsMenu = document.querySelector('.nav-special-projects');
+    const specialProjectsTrigger = document.querySelector('.nav-special-projects-trigger');
+
+    const closeDesktopMenus = () => {
+      desktopMenus.forEach((menu) => menu.classList.remove('menu-open'));
+      servicesTrigger.setAttribute('aria-expanded', 'false');
+      specialProjectsTrigger.setAttribute('aria-expanded', 'false');
+    };
+
+    servicesTrigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const willOpen = !servicesMenu.classList.contains('menu-open');
+      closeDesktopMenus();
+      servicesMenu.classList.toggle('menu-open', willOpen);
+      servicesTrigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    specialProjectsTrigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const willOpen = !specialProjectsMenu.classList.contains('menu-open');
+      closeDesktopMenus();
+      specialProjectsMenu.classList.toggle('menu-open', willOpen);
+      specialProjectsTrigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    desktopMenus.forEach((menu) => {
+      menu.addEventListener('mouseenter', () => {
+        if (menu === specialProjectsMenu && servicesMenu.classList.contains('menu-open')) {
+          closeDesktopMenus();
+        }
+      });
+
+      menu.addEventListener('mouseleave', () => {
+        closeDesktopMenus();
+      });
+    });
+
+    document.querySelector('.site-nav').addEventListener('click', (event) => {
+      if (event.target.matches('a:not(.nav-services-trigger, .nav-special-projects-trigger)')) {
+        closeDesktopMenus();
+      }
+    });
+
+    document.addEventListener('focusin', (event) => {
+      if (!mobileMenu.hidden && !mobileMenu.contains(event.target) && event.target !== navToggle) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !mobileMenu.hidden) {
+        closeMobileMenu();
+        navToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) {
+        closeMobileMenu();
+      }
+    });
+  </script>
+</body>
+</html>

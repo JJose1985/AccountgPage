@@ -1,0 +1,32 @@
+<svg width="1800" height="1200" viewBox="0 0 1800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="waveA" x1="210" y1="160" x2="1480" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE2C3"/>
+      <stop offset="1" stop-color="#D8F2F4"/>
+    </linearGradient>
+    <linearGradient id="waveB" x1="280" y1="250" x2="1560" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FEEEDB"/>
+      <stop offset="1" stop-color="#E6F6FF"/>
+    </linearGradient>
+    <radialGradient id="dotA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(390 320) rotate(90) scale(180)">
+      <stop stop-color="#E97835" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#E97835" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dotB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1360 830) rotate(90) scale(220)">
+      <stop stop-color="#16707A" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#16707A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path d="M-80 430C180 260 470 250 730 360C940 450 1120 650 1360 660C1530 668 1660 592 1860 520V1240H-80V430Z" fill="url(#waveA)"/>
+  <path d="M-120 660C160 520 410 500 650 560C920 630 1110 820 1350 860C1530 890 1690 852 1900 760V1240H-120V660Z" fill="url(#waveB)" opacity="0.9"/>
+
+  <circle cx="390" cy="320" r="180" fill="url(#dotA)"/>
+  <circle cx="1360" cy="830" r="220" fill="url(#dotB)"/>
+
+  <g opacity="0.35" stroke="#FFFFFF" stroke-width="2">
+    <path d="M180 940C370 850 590 840 760 900"/>
+    <path d="M980 1010C1170 920 1400 920 1570 980"/>
+    <path d="M420 180C590 130 800 145 980 220"/>
+  </g>
+</svg>
