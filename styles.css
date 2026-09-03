@@ -290,8 +290,9 @@ body {
 
 .section-heading > p:last-child {
   margin: 1rem 0 0;
-  color: var(--ink-soft);
+  color: #000;
   font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .services-grid {
@@ -336,7 +337,7 @@ body {
 
 .service-card p {
   margin: 0.7rem 0 0;
-  color: var(--ink-soft);
+  color: #fff;
 }
 
 .site-footer {
