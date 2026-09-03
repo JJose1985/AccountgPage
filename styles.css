@@ -159,10 +159,12 @@ body {
   border-radius: 0.65rem;
   background: rgba(219, 234, 254, 0.94);
   box-shadow: 0 14px 28px rgba(30, 64, 175, 0.16);
+  clip-path: inset(0 0 100% 0);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-0.35rem);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-0.5rem);
+  transform-origin: top;
+  transition: clip-path 0.28s ease-out, opacity 0.16s ease-out, transform 0.28s ease-out;
 }
 
 .nav-services .service-option-child {
@@ -185,12 +187,26 @@ body {
 }
 
 .nav-services.menu-open .service-option {
+  clip-path: inset(0 0 0 0);
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
+.nav-services.menu-open .service-option-child {
+  transition-delay: 0.06s;
+}
+
+.nav-services.menu-open .service-option-grandchild {
+  transition-delay: 0.12s;
+}
+
+.nav-services.menu-open .service-option-great-grandchild {
+  transition-delay: 0.18s;
+}
+
 .nav-special-projects.menu-open .special-project-option {
+  clip-path: inset(0 0 0 0);
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -211,10 +227,12 @@ body {
   border-radius: 0.65rem;
   background: rgba(219, 234, 254, 0.94);
   box-shadow: 0 14px 28px rgba(30, 64, 175, 0.16);
+  clip-path: inset(0 0 100% 0);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-0.35rem);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-0.5rem);
+  transform-origin: top;
+  transition: clip-path 0.28s ease-out, opacity 0.16s ease-out, transform 0.28s ease-out;
 }
 
 .btn {
@@ -441,6 +459,81 @@ body {
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
+.mobile-services-trigger {
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(219, 234, 254, 0.92);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-special-projects-trigger {
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(219, 234, 254, 0.92);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobile-services-menu {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mobile-services-menu.is-open .service-option {
+  animation: mobile-menu-curtain 0.3s ease-out both;
+}
+
+.mobile-services-menu.is-open .service-option:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.mobile-services-menu.is-open .service-option:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+.mobile-services-menu.is-open .service-option:nth-child(4) {
+  animation-delay: 0.18s;
+}
+
+.mobile-special-projects-menu {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mobile-special-projects-menu.is-open .special-project-option {
+  animation: mobile-menu-curtain 0.3s ease-out both;
+}
+
+.mobile-services-menu[hidden] {
+  display: none;
+}
+
+.mobile-special-projects-menu[hidden] {
+  display: none;
+}
+
+@keyframes mobile-menu-curtain {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .nav-services .service-option:hover,
 .nav-services .service-option:focus-visible,
 .nav-special-projects .special-project-option:hover,
@@ -457,36 +550,6 @@ body {
   margin-left: 1rem;
   width: calc(100% - 1rem);
   font-size: 0.9rem;
-}
-
-.mobile-menu .service-option-child {
-  margin-left: 2rem;
-  width: calc(100% - 2rem);
-}
-
-.mobile-menu a[href="#Tax-and-compliance"] {
-  margin-left: 1rem;
-  width: calc(100% - 1rem);
-}
-
-.mobile-menu a[href="#payroll-and-social-security"] {
-  margin-left: 1rem;
-  width: calc(100% - 1rem);
-}
-
-.mobile-menu a[href="#internal-audit-and-control"] {
-  margin-left: 1rem;
-  width: calc(100% - 1rem);
-}
-
-.mobile-menu .service-option-grandchild {
-  margin-left: 3rem;
-  width: calc(100% - 3rem);
-}
-
-.mobile-menu .service-option-great-grandchild {
-  margin-left: 4rem;
-  width: calc(100% - 4rem);
 }
 
 .mobile-menu .special-project-option {

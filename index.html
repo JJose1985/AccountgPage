@@ -44,13 +44,17 @@
       </button>
     </div>
     <div class="container mobile-menu" id="mobile-menu" hidden>
-      <a href="#Services">Servicios</a>
-      <a class="service-option" href="contabilidad-financiera-fiscal.html">Contabilidad financiera y fiscal</a>
-      <a class="service-option service-option-child" href="impuestos-y-cumplimiento.html">Impuestos y cumplimiento</a>
-      <a class="service-option service-option-child" href="nomina-y-seguridad-social.html">Nómina y seguridad social</a>
-      <a class="service-option service-option-child" href="auditoria-y-control-interno.html">Auditoría y control interno</a>
-      <a href="consultoria-y-proyectos-especiales.html">Proyectos Especiales</a>
-      <a class="special-project-option" href="consultoria-y-proyectos-especiales.html">Consultoría y proyectos especiales</a>
+      <button class="mobile-services-trigger" type="button" aria-expanded="false" aria-controls="mobile-services-menu">Servicios</button>
+      <div class="mobile-services-menu" id="mobile-services-menu" hidden>
+        <a class="service-option" href="contabilidad-financiera-fiscal.html">Contabilidad financiera y fiscal</a>
+        <a class="service-option" href="impuestos-y-cumplimiento.html">Impuestos y cumplimiento</a>
+        <a class="service-option" href="nomina-y-seguridad-social.html">Nómina y seguridad social</a>
+        <a class="service-option" href="auditoria-y-control-interno.html">Auditoría y control interno</a>
+      </div>
+      <button class="mobile-special-projects-trigger" type="button" aria-expanded="false" aria-controls="mobile-special-projects-menu">Proyectos Especiales</button>
+      <div class="mobile-special-projects-menu" id="mobile-special-projects-menu" hidden>
+        <a class="special-project-option" href="consultoria-y-proyectos-especiales.html">Consultoría y proyectos especiales</a>
+      </div>
       <a href="contacto.html">Contacto</a>
     </div>
   </header>
@@ -114,11 +118,21 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const mobileMenu = document.querySelector('#mobile-menu');
+    const mobileServicesTrigger = document.querySelector('.mobile-services-trigger');
+    const mobileServicesMenu = document.querySelector('#mobile-services-menu');
+    const mobileSpecialProjectsTrigger = document.querySelector('.mobile-special-projects-trigger');
+    const mobileSpecialProjectsMenu = document.querySelector('#mobile-special-projects-menu');
 
     const closeMobileMenu = () => {
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open menu');
       mobileMenu.hidden = true;
+      mobileServicesTrigger.setAttribute('aria-expanded', 'false');
+      mobileServicesMenu.classList.remove('is-open');
+      mobileServicesMenu.hidden = true;
+      mobileSpecialProjectsTrigger.setAttribute('aria-expanded', 'false');
+      mobileSpecialProjectsMenu.classList.remove('is-open');
+      mobileSpecialProjectsMenu.hidden = true;
     };
 
     navToggle.addEventListener('click', () => {
@@ -134,8 +148,32 @@
       }
     });
 
+    mobileServicesTrigger.addEventListener('click', () => {
+      const willOpen = mobileServicesMenu.hidden;
+      if (willOpen) {
+        mobileServicesMenu.hidden = false;
+        requestAnimationFrame(() => mobileServicesMenu.classList.add('is-open'));
+      } else {
+        mobileServicesMenu.classList.remove('is-open');
+        mobileServicesMenu.hidden = true;
+      }
+      mobileServicesTrigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    mobileSpecialProjectsTrigger.addEventListener('click', () => {
+      const willOpen = mobileSpecialProjectsMenu.hidden;
+      if (willOpen) {
+        mobileSpecialProjectsMenu.hidden = false;
+        requestAnimationFrame(() => mobileSpecialProjectsMenu.classList.add('is-open'));
+      } else {
+        mobileSpecialProjectsMenu.classList.remove('is-open');
+        mobileSpecialProjectsMenu.hidden = true;
+      }
+      mobileSpecialProjectsTrigger.setAttribute('aria-expanded', String(willOpen));
+    });
+
     mobileMenu.addEventListener('click', (event) => {
-      if (event.target.closest('a, button')) {
+      if (event.target.closest('a')) {
         closeMobileMenu();
       }
     });
