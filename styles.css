@@ -359,14 +359,6 @@ body {
   gap: 2.5rem;
 }
 
-.footer-intro .brand {
-  color: #fff;
-}
-
-.footer-intro .brand-mark {
-  background: linear-gradient(135deg, #1c9ad6, #3b82f6);
-}
-
 .footer-intro p {
   max-width: 21rem;
   margin: 1rem 0 0;
