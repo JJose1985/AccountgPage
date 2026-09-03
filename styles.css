@@ -582,6 +582,20 @@ body::before {
 }
 
 @media (max-width: 760px) {
+  .animated-bg {
+    position: absolute;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .animated-bg-video {
+    width: 112%;
+    height: 112%;
+    max-width: none;
+    animation: drift-bg-mobile 14s ease-in-out infinite alternate;
+    transform: translate3d(-6%, -6%, 0);
+  }
+
   .site-nav {
     display: none;
   }
@@ -609,6 +623,18 @@ body::before {
 
   .nav-toggle {
     display: flex;
+  }
+}
+
+@keyframes drift-bg-mobile {
+  0% {
+    transform: translate3d(-6%, -6%, 0) scale(1.04);
+  }
+  50% {
+    transform: translate3d(-3%, -8%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-8%, -3%, 0) scale(1.14);
   }
 }
 .mobile-menu[hidden] {
