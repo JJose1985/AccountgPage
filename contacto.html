@@ -68,6 +68,9 @@
     .site-footer { padding: 0 0 2rem; color: #fff; text-align: center; }
     @keyframes drift { 0% { transform: scale(1.04) translate3d(0, 0, 0); } 50% { transform: scale(1.08) translate3d(-1%, 1%, 0); } 100% { transform: scale(1.12) translate3d(1%, -1%, 0); } }
     @media (max-width: 760px) { .contact-hero { padding-top: 3rem; text-align: left; } .hero-copy { margin-left: 0; } .contact-layout, .field-row { grid-template-columns: 1fr; } .contact-panel, .form-panel { padding: 1.4rem; } }
+    body::before { position: fixed; inset: 0; z-index: 100; background: #d9ecff; content: ""; pointer-events: none; transform-origin: right; animation: page-curtain 0.65s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+    @keyframes page-curtain { to { transform: scaleX(0); } }
+    @media (prefers-reduced-motion: reduce) { body::before { display: none; } }
   </style>
 </head>
 <body>
