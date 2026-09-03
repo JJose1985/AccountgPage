@@ -21,7 +21,7 @@
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 1.15rem; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 1rem; background: rgba(255, 255, 255, 0.3); box-shadow: 0 16px 32px rgba(17, 24, 39, 0.08); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
     .brand, .back-link { color: var(--ink); font-weight: 700; text-decoration: none; }
     .brand { display: inline-flex; align-items: center; gap: 0.75rem; }
-    .brand-mark { display: inline-grid; width: 2.25rem; height: 2.25rem; place-items: center; border-radius: 0.7rem; background: linear-gradient(135deg, #1c9ad6, #3b82f6); color: #fff; font-size: 0.82rem; }
+    .brand-mark { width: 2.75rem; height: 2.75rem; flex: 0 0 auto; filter: drop-shadow(0 8px 12px rgba(18, 54, 90, 0.2)); }
     .back-link { color: #1d4ed8; }
     .hero { padding: 5rem 0 3.5rem; }
     .eyebrow { margin: 0 0 0.7rem; color: var(--accent); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -56,8 +56,8 @@
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Volver a AccountingPage"><span class="brand-mark" aria-hidden="true">AP</span><span>AccountingPage</span></a>
-      <a class="back-link" href="index.html#Services">Volver a servicios</a>
+      <a class="brand" href="index.html" aria-label="Volver a AccountingPage"><img class="brand-mark" src="assets/cpg-logo.svg" alt="" /><span>AccountingPage</span></a>
+      <a class="back-link" href="index.html#Services">Home</a>
     </div>
   </header>
 
