@@ -301,16 +301,13 @@ body {
 }
 
 .service-card {
-  display: block;
   min-height: 14rem;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 0.5rem;
   background: var(--card-surface);
-  color: var(--ink);
   box-shadow: 0 8px 18px rgba(30, 64, 175, 0.1), 0 22px 44px rgba(29, 44, 72, 0.16);
   scroll-margin-top: 7rem;
-  text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -319,16 +316,22 @@ body {
   transform: translateY(-5px);
 }
 
-.service-card:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
 .service-card h2 {
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
   font-size: 1.4rem;
   line-height: 1.2;
+}
+
+.service-card h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.service-card h2 a:hover,
+.service-card h2 a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .service-card p {
